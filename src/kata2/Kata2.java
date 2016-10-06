@@ -21,12 +21,9 @@ public class Kata2 {
         
         
         int[] data = {1,1,1,3,4,5,6,90};
-        Map<Integer,Integer> histogram = new HashMap<>();
         
-        
-        for (int i : data) {
-            histogram.put(i, histogram.containsKey(i)?histogram.get(i)+1:1);
-        }
+        Histogram histo = new Histogram(data);
+        Map<Integer,Integer> histogram = histo.getHistogram();
         
         
         for (int key : histogram.keySet()) {
