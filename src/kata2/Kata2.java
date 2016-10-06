@@ -20,13 +20,13 @@ public class Kata2 {
     public static void main(String[] args) {
         
         
-        int[] data = {1,1,1,3,4,5,6,90};
-        
+        //int[] data = {1,1,1,3,4,5,6,90};
+        String[] data = {"Peppe" , "Luigi" , "Giovi" , "Peppe" , "Peppino" , "Gigi" , "Luigi"};
         Histogram histo = new Histogram(data);
-        Map<Integer,Integer> histogram = histo.getHistogram();
+        Map<String,Integer> histogram = histo.getHistogram();
         
         
-        for (int key : histogram.keySet()) {
+        for (String key : histogram.keySet()) {
             System.out.println(key + " ---> " + histogram.get(key));
         }
         
